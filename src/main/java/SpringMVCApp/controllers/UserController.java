@@ -2,7 +2,6 @@ package SpringMVCApp.controllers;
 
 import SpringMVCApp.dao.UserDAO;
 import SpringMVCApp.models.User;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +21,7 @@ public class UserController {
 
     @GetMapping()
     public String index(Model model) {
-        model.addAttribute("users",userDao.index());
+        model.addAttribute("users", userDao.index());
         return "users/index";
     }
 
@@ -34,13 +33,13 @@ public class UserController {
     }
 
     @GetMapping("/new")
-    public String newUser (@ModelAttribute("user") User user) {
+    public String newUser(@ModelAttribute("user") User user) {
         return "users/new";
     }
 
     @PostMapping()
-    public String create (@ModelAttribute("user") User user ,
-                          BindingResult bindingResult) {
+    public String create(@ModelAttribute("user") User user,
+                         BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             return "users/new";
 
@@ -55,17 +54,17 @@ public class UserController {
     }
 
     @PostMapping("/edit")
-    public String update (@ModelAttribute("user") User user,
-                          BindingResult bindingResult, @RequestParam("id") int id ){
+    public String update(@ModelAttribute("user") User user,
+                         BindingResult bindingResult, @RequestParam("id") int id) {
         if (bindingResult.hasErrors())
             return "users/edit";
 
-        userDao.update(id,user);
+        userDao.update(id, user);
         return "redirect:/users";
     }
 
     @PostMapping("/delete")
-    public String delete(@RequestParam ("id") int id, Model model) {
+    public String delete(@RequestParam("id") int id, Model model) {
         User user = userDao.show(id);
         model.addAttribute("user", user);
         userDao.delete(id);
