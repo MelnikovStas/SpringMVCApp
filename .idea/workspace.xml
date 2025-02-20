@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SpringMVCApp:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9dae955-e7cd-492d-a6d7-dae931ca5303" name="Changes" comment="• Добавить сервис-слой&#10;&#10;• Добавить интерфейсы для ДАО и сервиса&#10;&#10;• @Transactional правильней всего использовать на сервис-слое&#10;&#10;• Зачем нужны аннотации Column? Убери их в местах, где они ничего не меняют&#10;&#10;• После if всегда { }&#10;&#10;• Установи параметр spring.jpa.hibernate.ddl-auto=create-drop">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SpringMVCApp/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SpringMVCApp/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SpringMVCApp/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpringMVCApp/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringMVCApp/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpringMVCApp/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringMVCApp/dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SpringMVCApp/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringMVCApp/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/config/SpringmvcDispatcherServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/config/SpringmvcDispatcherServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/SpringMVCApp/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/classes/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/views/users/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/views/users/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/views/users/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/SpringMVCApp/WEB-INF/views/users/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringMVCApp/config/SpringConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringMVCApp/config/SpringConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringMVCApp/config/SpringmvcDispatcherServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringMVCApp/config/SpringmvcDispatcherServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringMVCApp/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringMVCApp/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringMVCApp/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringMVCApp/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringMVCApp/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MelnikovStas&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MelnikovStas/SpringMVCApp.git&quot;,
+    &quot;accountId&quot;: &quot;2e3ce6ad-fa58-4f93-a7c6-b05c143f740b&quot;
+  }
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2t3PcJpjQJeJjc5UKNLMy8621YH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Tomcat Server.Tomcat 9.0.99.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/stas/java/projects/SpringMVCApp2.3.1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\stas\java\projects\SpringMVCApp2.3.1\src\main\webapp" />
+      <recent name="C:\stas\java\projects\SpringMVCApp2.3.1\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\stas\java\projects\SpringMVCApp2.3.1\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.99" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.99" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/users" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="SpringMVCApp:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="af52efad-7646-4091-b422-2a7b55c6a480" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51692" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="SpringMVCApp:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9dae955-e7cd-492d-a6d7-dae931ca5303" name="Changes" comment="" />
+      <created>1739577862633</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739577862633</updated>
+      <workItem from="1739577864170" duration="13366000" />
+      <workItem from="1739674907418" duration="17860000" />
+      <workItem from="1739783865720" duration="6738000" />
+      <workItem from="1739800807275" duration="14783000" />
+      <workItem from="1739904381578" duration="8538000" />
+      <workItem from="1739923483240" duration="6236000" />
+      <workItem from="1739929751376" duration="68000" />
+      <workItem from="1740075869117" duration="4676000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ready">
+      <option name="closed" value="true" />
+      <created>1739929343923</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739929343923</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ready">
+      <option name="closed" value="true" />
+      <created>1739929371133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739929371133</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ready">
+      <option name="closed" value="true" />
+      <created>1739929621386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739929621386</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ready" />
+    <MESSAGE value="• Добавить сервис-слой&#10;&#10;• Добавить интерфейсы для ДАО и сервиса&#10;&#10;• @Transactional правильней всего использовать на сервис-слое&#10;&#10;• Зачем нужны аннотации Column? Убери их в местах, где они ничего не меняют&#10;&#10;• После if всегда { }&#10;&#10;• Установи параметр spring.jpa.hibernate.ddl-auto=create-drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="• Добавить сервис-слой&#10;&#10;• Добавить интерфейсы для ДАО и сервиса&#10;&#10;• @Transactional правильней всего использовать на сервис-слое&#10;&#10;• Зачем нужны аннотации Column? Убери их в местах, где они ничего не меняют&#10;&#10;• После if всегда { }&#10;&#10;• Установи параметр spring.jpa.hibernate.ddl-auto=create-drop" />
+  </component>
+</project>

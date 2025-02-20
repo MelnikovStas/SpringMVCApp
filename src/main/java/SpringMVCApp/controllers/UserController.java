@@ -1,8 +1,7 @@
 package SpringMVCApp.controllers;
 
-import SpringMVCApp.dao.UserDAO;
 import SpringMVCApp.models.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import SpringMVCApp.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,22 +11,22 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/users")
 public class UserController {
 
-    private UserDAO userDao;
+    private final UserService userService;
 
-    @Autowired
-    public UserController(UserDAO userDao) {
-        this.userDao = userDao;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
+
 
     @GetMapping()
     public String index(Model model) {
-        model.addAttribute("users", userDao.index());
+        model.addAttribute("users", userService.findAll());
         return "users/index";
     }
 
     @GetMapping("/user")//страница со всеми юзерами
     public String user(@RequestParam("id") int userId, Model model) {
-        User user = userDao.show(userId);
+        User user = userService.findById(userId);
         model.addAttribute("user", user);
         return "users/show";
     }
@@ -40,34 +39,36 @@ public class UserController {
     @PostMapping()
     public String create(@ModelAttribute("user") User user,
                          BindingResult bindingResult) {
-        if (bindingResult.hasErrors())
-            return "users/new";
+        if (bindingResult.hasErrors()) {
+            return "redirect:/users";
+        }
 
-        userDao.save(user);
+        userService.create(user);
         return "redirect:/users";
     }
 
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("user", userDao.show(id));
+        model.addAttribute("user", userService.findById(id));
         return "users/edit";
     }
 
     @PostMapping("/edit")
     public String update(@ModelAttribute("user") User user,
                          BindingResult bindingResult, @RequestParam("id") int id) {
-        if (bindingResult.hasErrors())
+        if (bindingResult.hasErrors()) {
             return "users/edit";
+        }
 
-        userDao.update(id, user);
+        userService.update(user,id);
         return "redirect:/users";
     }
 
     @PostMapping("/delete")
     public String delete(@RequestParam("id") int id, Model model) {
-        User user = userDao.show(id);
+        User user = userService.findById(id);
         model.addAttribute("user", user);
-        userDao.delete(id);
+        userService.delete(user,id);
         return "redirect:/users";
     }
 
